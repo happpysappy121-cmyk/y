@@ -1055,9 +1055,12 @@
         }
 
         function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // This correctly scrolls the entire window/page to the top with a smooth animation.
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
-
         // Handle Scroll-to-top button visibility (KEPT AS IS)
         const scrollToTopButton = document.getElementById('scroll-to-top');
         window.onscroll = function() {
